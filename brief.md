@@ -20,10 +20,19 @@ OWASP MASVS provides security requirements for mobile applications, covering are
 Resource: OWASP Mobile Application Security Verification Standard (MASVS) - https://mas.owasp.org/MASVS/
 
 ## Networking
+BGP route hijacking occurs when an unauthorized network announces IP prefixes belonging to another network, potentially redirecting internet traffic through the wrong path. RPKI helps reduce this risk by using digitally signed Route Origin Authorizations (ROAs) to verify whether an Autonomous System is authorized to originate a prefix. However, RPKI origin validation does not verify the entire AS path, so it cannot prevent every routing attack.
+
+Resource: RFC 6811: BGP Prefix Origin Validation - https://www.rfc-editor.org/rfc/rfc6811
 
 ## Cybersecurity
+Log4Shell (CVE-2021-44228) was a critical vulnerability in Apache Log4j, a widely used Java logging library. Attackers could exploit unsafe JNDI lookups through specially crafted log messages, potentially executing malicious code remotely. It was extremely severe because exploitation could be possible without authentication and many applications depended on Log4j. Apache addressed the vulnerability through security updates, initially in version 2.15.0, followed by additional fixes in later releases.
+
+Resource: Apache Logging Services: Security - https://logging.apache.org/security.html
 
 ## Data
+A Software Bill of Materials (SBOM) is a structured inventory of software components and their dependencies. It helps organizations identify which libraries and versions are included in their applications, making vulnerability management more effective. According to NTIA, the minimum data fields include supplier name, component name, component version, other unique identifiers, dependency relationships, SBOM data author, and timestamp. These details improve transparency and help security teams respond when vulnerable components are discovered.
+
+Resource: NTIA: The Minimum Elements For a Software Bill of Materials (SBOM) - https://www.ntia.gov/report/2021/minimum-elements-software-bill-materials-sbom
 
 ## Misconception in My Track
 
